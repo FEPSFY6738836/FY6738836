@@ -170,4 +170,16 @@ Luis, S. V. (2020) Flow chemistry : integrated approaches for practical applic
 <h2>Conference paper: Upscaling of the production of pharmaceutical products on an industrial level</h2>
 <script>
   // Array of slide image URLs
-  var slideImage = ["Slide1.jpeg", "Slide2.jpg",] 
+  var slideImage = ["Slide1.jpeg", "Slide2.jpg","Slide3.jpg","Slide4.jpg","Slide5.jpg"];
+  var currentslide = 0;
+  function showSlide() {
+    document.getElementById('slide').src = slideImages[currentSlide};
+  }
+  function nextSlide() {
+  currentSlide = (currentSlide + 1) % slideImahes.length;
+    showSlide();
+  }
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 +slideImages.length) % slideImage.length;
+    showSlide();
+  }
